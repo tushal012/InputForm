@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-flow: column wrap;
     align-content: center;
-    background: tomato;
+    background: rgb(38, 122, 218);
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -55,7 +55,7 @@ button {
 error-output {
     font-size: 13px;
     font-style: italic;
-    color: red;
+    color: rgb(211, 233, 86);
 }
 
 @media only screen and (max-width: 360px) {
