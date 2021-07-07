@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=divice-widths">
     <title>Basic input Type</title>
-    <link rel="stylesheet" href="\css\form.css">
+    <link rel="stylesheet" href="form.css">
 </head>
 
 <body>
@@ -86,8 +86,8 @@
             let emailRegex = RegExp("^[0-9A-Za-z]+(([._+-]?)[0-9A-Za-z]+)*" +
                 "@[0-9A-Za-z]+.[a-z]{2,4}.([a-z]{2,3})*$");
             if (emailRegex.test(email.value))
-                emailError.emailContent = "";
-            else emailError.emailContent = "Email is Incorrect"
+                emailError.textContent = "";
+            else emailError.textContent = "Email is Incorrect"
         
     };
 
@@ -96,8 +96,8 @@
         number.addEventListener('input', function() {
             let numberRegex = RegExp('^[9][1]\\s[6-9][0-9]{9}$');
             if (numberRegex.test(number.value))
-                numberError.numberContent = "";
-            else numberError.numberContent = "Mobile number is Incorrect";
+                numberError.textContent = "";
+            else numberError.textContent = "Mobile number is Incorrect";
         });
 
         const password = document.querySelector('#password');
@@ -105,8 +105,8 @@
         password.oninput = function() {
             let passwordRegex = RegExp('^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()]).{8,}$');
             if (passwordRegex.test(password.value))
-                passwordError.passwordContent = "";
-            else passwordError.passwordContent = "password is Incorrect"
+                passwordError.testContent = "";
+            else passwordError.testContent = "password is Incorrect"
         };
 
 

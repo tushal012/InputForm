@@ -1,3 +1,4 @@
+
 html,
 input {
     font-family: sans-serif;
@@ -21,6 +22,7 @@ body {
 
 form {
     margin-top: 50px;
+    background-color: darkseagreen;
 }
 
 div {
@@ -50,6 +52,8 @@ input {
 button {
     width: 70%;
     margin: 0 auto;
+    color: darkgray;
+    background-color: darkcyan;
 }
 
 error-output {
