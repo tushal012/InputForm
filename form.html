@@ -103,7 +103,7 @@
         const password = document.querySelector('#password');
         const passwordError = document.querySelector('.password-error');
         password.oninput = function() {
-            let passwordRegex = RegExp('^[A-Z a-z]{8,}');
+            let passwordRegex = RegExp('^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()]).{8,}$');
             if (passwordRegex.test(password.value))
                 passwordError.passwordContent = "";
             else passwordError.passwordContent = "password is Incorrect"
