@@ -14,53 +14,53 @@
             <h1>HTML 5 form input</h1>
         </header>
         <div>
-            <label for="text">text input type for input name:</label>
+            <label for="text">Text input type for name: </label>
             <input type="text" id="text" name="text" required>
             <error-output class="text-error" for="text"></error-output>
         </div>
         <br>
         <div>
-            <label for="pwd">password input type: </label>
-            <input type="password" id="pwd" name="pwd" required>
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" required>
             <error-output class="password-error" for="password"></error-output>
         </div>
         <br>
         <div>
-            <label for="email">email input type: </label>
+            <label for="email">Email input type: </label>
             <input type="email" id="email" name="email">
             <error-output class="email-error" for="email"></error-output>
         </div>
         <br>
         <div>
-            <label for="url">url input type: </label>
+            <label for="url">Url input type: </label>
             <input type="url" id="url" name="url">
         </div>
         <br>
         <div>
-            <label for=number>number input type: </label>
+            <label for=number>Number input type: </label>
             <input type="number" id="number" name="number">
-            <error-output class="number-error" for="Mobile"></error-output>
+            <error-output class="number-error" for="number"></error-output>
         </div>
         <br>
         <div>
-            <label for="tel">tel input type</label>
+            <label for="tel">Tel input type</label>
             <input type="tel" id="tel" name="tel">
         </div>
         <br>
         <div>
-            <label for="search">search input type</label>
+            <label for="search">Search input type: </label>
             <input type="search" id="search" name="search">
         </div>
         <br>
         <div class="nativeDateTimePicker">
-            <label for="startDate">Choose a date and time</label>
+            <label for="startDate">Choose a date and time: </label>
             <input type="datetime-local" id="startDate" name="startDate">
             <span class="validity"></span>
         </div>
         <br>
         <div>
             <label for="salary">Choose your salary: </label>
-            <input type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
+            <input type="range" name="salary" id="salary" min="300000" max="500000" step="10" value="400000">
             <output class="salary-output" for="salary">400000</output>
         </div>
         <br>
@@ -100,21 +100,22 @@
             else numberError.textContent = "Mobile number is Incorrect";
         });
 
-        const password = document.querySelector('#password');
-        const passwordError = document.querySelector('.password-error');
-        password.oninput = function() {
+         const password = document.querySelector('#password');
+         const passwordError = document.querySelector('.password-error');
+            password.addEventListener('input', function() {
             let passwordRegex = RegExp('^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()]).{8,}$');
-            if (passwordRegex.test(password.value))
-                passwordError.testContent = "";
-            else passwordError.testContent = "password is Incorrect"
-        };
+           if (passwordRegex.test(password.value))
+             passwordError.textContent= "";
+            else passwordError.textContent = "password is Incorrect"
 
-
+          });
+        
         const salary = document.querySelector('#salary');
         const output = document.querySelector('.salary-output');
         output.textContent = salary.value;
         salary.addEventListener('input', function() {
             output.textContent = salary.value;
+            console.log("salary"+ salary.value);
         });
     </script>
 </body>
